@@ -1,0 +1,70 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  padding : 0vw 20vw;
+  height: 50vh;
+  width: 50vw;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+  min-height: 7vw;
+  width: 10vw;
+  font-size: 16px;
+
+  border: 4px black ridge;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.tile--set {
+  background: #BE1558;
+  font-style: italic;
+
+  font-weight: bold;
+  color:white
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+
+  pointer-events: none;
+}
+.center {
+  background: #E75874;
+
+}
+@media only screen and (max-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    padding : 5vw 5vw;
+    height: 80vh;
+    width: 70vw;
+  }
+  .tile{
+    font-size: 11px;
+  }
+}
