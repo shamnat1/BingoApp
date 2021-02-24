@@ -57,21 +57,26 @@ const data = shuffle(bingoTextList).reduce(
 function App() {
 
   const [state, setState] = useState({ checked: {12:1} ,numberOfPieces:500});
-  const isWon = checked => {
-    const range = [0, 1, 2, 3, 4];
+  const isWon = (checked,id) => {
+    const range = [0, 1, 2, 3, 4];let row = Math.floor(id/5)
+      let column = id%5
     return (
+        range.every(column => checked[row * 5 + column]) &&
         undefined !==
-        range.find(row => range.every(column => checked[row * 5 + column])) ||
+        range.every(column => checked[row * 5 + column]) ||
+        range.every(row => checked[row * 5 + column]) &&
         undefined !==
-        range.find(column => range.every(row => checked[row * 5 + column])) ||
+        range.every(row => checked[row * 5 + column])  ||
+        (row === column) &&
         range.every(index => checked[index * 5 + index]) ||
+        (row + column === 4) &&
         range.every(index => checked[index * 5 + 4 - index])
     );
   };
   const toggle = id => {
       setState(state => {
               const checked = {...state.checked, [id]: !state.checked[id]};
-              const won = isWon(checked);
+              const won = isWon(checked,id);
               return {
                   ...state,
                   checked,
@@ -83,7 +88,6 @@ function App() {
       );
   }
     const completeConfetti = ()=>{
-        console.log("completeConfitti",state.numberOfPieces)
         setTimeout(() => {
             setState(state => {
 
