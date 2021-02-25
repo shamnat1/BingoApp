@@ -61,10 +61,10 @@ canvas {
     display: grid;
     grid-template-columns: repeat(5, auto);
     padding : 5vw 5vw;
-    height: 70vh;
+    height: 60vh;
     width: 70vw;
   }
   .tile{
-    font-size: 11px;
+    font-size: 9px;
   }
 }
