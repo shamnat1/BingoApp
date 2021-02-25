@@ -63,6 +63,7 @@ canvas {
     padding : 5vw 5vw;
     height: 60vh;
     width: 70vw;
+    padding-top: 20vw;
   }
   .tile{
     font-size: 9px;
