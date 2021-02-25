@@ -32,7 +32,7 @@ const bingoTextList = [
     "is --- on the call",
     "Could you share the slide afterwards",
     "can somebody grant presenter rights",
-    "Can you email that to every one",
+    "Can you email that to everyone",
     "Sorry, had problem logging in",
     "The results look promising",
     "Animal noises in the background",

@@ -61,7 +61,7 @@ canvas {
     display: grid;
     grid-template-columns: repeat(5, auto);
     padding : 5vw 5vw;
-    height: 80vh;
+    height: 70vh;
     width: 70vw;
   }
   .tile{
